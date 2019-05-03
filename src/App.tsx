@@ -1,4 +1,4 @@
-import React, { useState, FormEvent } from "react";
+import React, { useState, ChangeEvent } from "react";
 import "./App.css";
 
 interface Props {
@@ -24,22 +24,25 @@ function App({ client }: Props) {
       client.submit({ reaction, thoughts });
     }
   }
-  function handleTextChange(event: FormEvent<HTMLInputElement>) {
-    setThoughts(event.currentTarget.value);
+  function handleTextChange(event: ChangeEvent<HTMLTextAreaElement>) {
+    setThoughts(event.target.value)
   }
   return (
     <div className="App">
       {error && <ErrorMessage />}
-      <button onClick={() => setReaction("happy")}>Happy</button>
-      <button onClick={() => setReaction("confused")}>Confused</button>
-      <label htmlFor="thoughts-input">Thoughts</label>
-      <input
-        id="thoughts-input"
-        type="text"
-        value={thoughts}
-        onChange={handleTextChange}
-      />
-      <button onClick={submit}>Submit</button>
+      <div id='button-container'>
+        <button id='happy' onClick={() => setReaction("happy")}>Happy</button>
+        <button id='confused' onClick={() => setReaction("confused")}>Confused</button>
+      </div>
+      <div id='textarea'>
+        <label htmlFor="thoughts-input">Thoughts</label>
+        <textarea
+          id="thoughts-input"
+          value={thoughts}
+          onChange={handleTextChange}
+        />
+      </div>
+      <button className='submit' onClick={submit}>Submit</button>
     </div>
   );
 }
