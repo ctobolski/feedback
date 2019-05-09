@@ -2,10 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import client from './Client'
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
-  <App client={{ submit: () => {} }} />,
+  <App client={client} />,
   document.getElementById("root")
 );
 

@@ -3,38 +3,36 @@ import "./App.css";
 
 interface Props {
   client: {
-    submit: ({
-      reaction,
-      thoughts
-    }: {
-      reaction: string | null;
-      thoughts: string;
-    }) => void;
+    submit: (reaction: string, thoughts: string) => void;
   };
 }
 
 function App({ client }: Props) {
-  const [reaction, setReaction] = useState<string | null>(null);
+  const [reaction, setReaction] = useState<string>("");
   const [thoughts, setThoughts] = useState<string>("");
   const [error, setError] = useState(false);
   function submit() {
-    if (reaction === null) {
+    if (reaction === "") {
       setError(true);
     } else {
-      client.submit({ reaction, thoughts });
+      client.submit(reaction, thoughts);
     }
   }
   function handleTextChange(event: ChangeEvent<HTMLTextAreaElement>) {
-    setThoughts(event.target.value)
+    setThoughts(event.target.value);
   }
   return (
     <div className="App">
       {error && <ErrorMessage />}
-      <div id='button-container'>
-        <button id='happy' onClick={() => setReaction("happy")}>Happy</button>
-        <button id='confused' onClick={() => setReaction("confused")}>Confused</button>
+      <div id="button-container">
+        <button id="happy" onClick={() => setReaction("happy")}>
+          Happy
+        </button>
+        <button id="confused" onClick={() => setReaction("confused")}>
+          Confused
+        </button>
       </div>
-      <div id='textarea'>
+      <div id="textarea">
         <label htmlFor="thoughts-input">Thoughts</label>
         <textarea
           id="thoughts-input"
@@ -42,7 +40,9 @@ function App({ client }: Props) {
           onChange={handleTextChange}
         />
       </div>
-      <button className='submit' onClick={submit}>Submit</button>
+      <button className="submit" onClick={submit}>
+        Submit
+      </button>
     </div>
   );
 }

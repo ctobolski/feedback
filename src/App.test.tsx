@@ -13,10 +13,7 @@ it("Can submit happy feedback", async () => {
   fireEvent.click(happyButton);
   fireEvent.click(getByText(/submit/i));
   await wait(() => expect(mockClient.submit).toHaveBeenCalled());
-  expect(mockClient.submit).toHaveBeenCalledWith({
-    reaction: "happy",
-    thoughts: ""
-  });
+  expect(mockClient.submit).toHaveBeenCalledWith("happy", "");
 });
 
 it("Does not submit unless a reaction has been selected", () => {
@@ -51,8 +48,8 @@ it("submits optional comments", () => {
   });
 
   fireEvent.click(getByText(/submit/i));
-  expect(mockClient.submit).toHaveBeenCalledWith({
-    reaction: "confused",
-    thoughts: "What is the testing pyramid?"
-  });
+  expect(mockClient.submit).toHaveBeenCalledWith(
+    "confused",
+    "What is the testing pyramid?"
+  );
 });

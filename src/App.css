@@ -4,65 +4,61 @@
   width: 80%;
   justify-content: space-evenly;
   min-height: 80vh;
-  
 }
 
 #button-container {
-  display:flex;
+  display: flex;
   width: 100%;
   justify-content: space-between;
   align-self: center;
 }
 
 #textarea {
-  display:flex;
+  display: flex;
   flex-direction: column;
   width: 100%;
-} 
+}
 
 button {
   height: 8em;
   width: 8em;
-	border-radius:3px;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:15px;
-	padding:9px 23px;
-	text-decoration:none;
+  border-radius: 3px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 9px 23px;
+  text-decoration: none;
 }
 
-#happy { 
-	box-shadow:inset 0px -3px 7px 0px #34e251;
-	background:linear-gradient(to bottom, #34e251 5%, #2db744 100%);
-	background-color:#34e251;
-	border:1px solid #0b0e07;
+#happy {
+  box-shadow: inset 0px -3px 7px 0px #34e251;
+  background: linear-gradient(to bottom, #34e251 5%, #2db744 100%);
+  background-color: #34e251;
+  border: 1px solid #0b0e07;
 }
 
-#confused { 
-	box-shadow:inset 0px -3px 7px 0px #eef204;
-  background:linear-gradient(to bottom, #eef204 5%, #dadd00 100%); 
-	background-color:#eef204;
-	border:1px solid #0b0e07;
+#confused {
+  box-shadow: inset 0px -3px 7px 0px #eef204;
+  background: linear-gradient(to bottom, #eef204 5%, #dadd00 100%);
+  background-color: #eef204;
+  border: 1px solid #0b0e07;
 }
-
-
-
 
 .submit {
   align-self: center;
   height: 4em;
   width: 8em;
-	box-shadow:inset 0px -3px 7px 0px #29bbff;
-	background:linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
-	background-color:#2dabf9;
-	border-radius:3px;
-	border:1px solid #0b0e07;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-size:15px;
-	padding:9px 23px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
+  box-shadow: inset 0px -3px 7px 0px #29bbff;
+  background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+  background-color: #2dabf9;
+  border-radius: 3px;
+  border: 1px solid #0b0e07;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 9px 23px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #263666;
 }
