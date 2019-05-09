@@ -1,9 +1,14 @@
 import React, { useState, ChangeEvent } from "react";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMeh, faGrinStars } from "@fortawesome/free-solid-svg-icons";
 import "./App.css";
+
+library.add(faMeh, faGrinStars);
 
 interface Props {
   client: {
-    submit: (reaction: string, thoughts: string) => void;
+    submit: (reaction: string, thoughts?: string) => void;
   };
 }
 
@@ -25,12 +30,20 @@ function App({ client }: Props) {
     <div className="App">
       {error && <ErrorMessage />}
       <div id="button-container">
-        <button id="happy" onClick={() => setReaction("happy")}>
-          Happy
-        </button>
-        <button id="confused" onClick={() => setReaction("confused")}>
-          Confused
-        </button>
+        <span
+          className="icon-wrapper"
+          data-testid="happy-btn"
+          onClick={() => setReaction("happy")}
+        >
+          <FontAwesomeIcon icon="grin-stars" size="10x" />
+        </span>
+        <span
+          className="icon-wrapper"
+          data-testid="confused-btn"
+          onClick={() => setReaction("confused")}
+        >
+          <FontAwesomeIcon icon="meh" size="10x" />
+        </span>
       </div>
       <div id="textarea">
         <label htmlFor="thoughts-input">Thoughts</label>

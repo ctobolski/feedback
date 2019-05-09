@@ -5,7 +5,7 @@ const client = new ApolloClient({
   uri: "http://localhost:8000/graphql"
 });
 
-function submit(reaction: string, message: string) {
+function submit(reaction: string, message = "") {
   client
     .mutate({
       mutation: gql`

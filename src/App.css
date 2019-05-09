@@ -1,22 +1,23 @@
 .App {
   display: flex;
   flex-direction: column;
-  width: 80%;
   justify-content: space-evenly;
-  min-height: 80vh;
 }
 
-#button-container {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-self: center;
+.icon-wrapper {
+  cursor: pointer;
 }
 
 #textarea {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
 
 button {
@@ -29,20 +30,6 @@ button {
   font-size: 15px;
   padding: 9px 23px;
   text-decoration: none;
-}
-
-#happy {
-  box-shadow: inset 0px -3px 7px 0px #34e251;
-  background: linear-gradient(to bottom, #34e251 5%, #2db744 100%);
-  background-color: #34e251;
-  border: 1px solid #0b0e07;
-}
-
-#confused {
-  box-shadow: inset 0px -3px 7px 0px #eef204;
-  background: linear-gradient(to bottom, #eef204 5%, #dadd00 100%);
-  background-color: #eef204;
-  border: 1px solid #0b0e07;
 }
 
 .submit {
@@ -61,4 +48,35 @@ button {
   padding: 9px 23px;
   text-decoration: none;
   text-shadow: 0px 1px 0px #263666;
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  /* .App {
+    width: 80%;
+    min-height: 80vh;
+  }
+  #button-container {
+    width: 100%;
+  } */
+}
+
+/* ----------- Retina Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+  /* .App {
+    width: 80%;
+    min-height: 80vh;
+  }
+  #button-container {
+    width: 100%;
+  } */
+}
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+}
+
+/* ----------- iPhone X ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
 }
