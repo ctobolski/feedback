@@ -7,7 +7,7 @@ export interface FeedbackProps {
 }
 
 export interface FeedbackButtonProps {
-  setReaction: (reaction: string) => void;
+  setReaction: () => void;
   testId: string;
   iconName: IconProp;
 }
