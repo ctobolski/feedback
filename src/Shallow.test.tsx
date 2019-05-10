@@ -8,7 +8,7 @@ describe("Implementation tests", () => {
       submit: jest.fn(() => Promise.resolve())
     };
     const wrapper = shallow(<App client={mockClient} />);
-    const happyButton = wrapper.find("span");
+    const happyButton = wrapper.find("span").at(0);
     happyButton.simulate("click");
     //@ts-ignore
     expect(wrapper.instance().state.reaction).toEqual("happy");
