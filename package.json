@@ -6,10 +6,6 @@
     "@fortawesome/fontawesome-svg-core": "1.2.18",
     "@fortawesome/free-solid-svg-icons": "5.8.2",
     "@fortawesome/react-fontawesome": "0.1.4",
-    "@types/jest": "^24.0.12",
-    "@types/node": "11.13.8",
-    "@types/react": "16.8.15",
-    "@types/react-dom": "16.8.4",
     "apollo-boost": "0.3.1",
     "axios": "^0.18.0",
     "graphql": "14.2.1",
@@ -17,9 +13,7 @@
     "jest-dom": "^3.1.4",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
-    "react-testing-library": "^7.0.0",
-    "typescript": "3.4.5"
+    "react-scripts": "3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,8 +37,15 @@
     ]
   },
   "devDependencies": {
+    "@types/enzyme": "3.9.1",
     "enzyme": "3.9.0",
     "enzyme-adapter-react-16": "1.12.1",
-    "react-test-renderer": "16.8.6"
+    "react-test-renderer": "16.8.6",
+    "@types/jest": "^24.0.12",
+    "@types/node": "11.13.8",
+    "@types/react": "16.8.15",
+    "@types/react-dom": "16.8.4",
+    "react-testing-library": "^7.0.0",
+    "typescript": "3.4.5"
   }
 }
