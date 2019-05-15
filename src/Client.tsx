@@ -1,6 +1,6 @@
 import ApolloClient from "apollo-boost";
 import gql from "graphql-tag";
-const uri = process.env.URI || "http://localhost:8000/graphql";
+const uri = process.env.REACT_APP_URI || "http://localhost:8000/graphql";
 const client = new ApolloClient({ uri });
 
 function submit(reaction: string, message = "") {
