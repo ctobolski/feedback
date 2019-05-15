@@ -1,9 +1,7 @@
 import ApolloClient from "apollo-boost";
 import gql from "graphql-tag";
-
-const client = new ApolloClient({
-  uri: "http://localhost:8000/graphql"
-});
+const uri = process.env.URI || "http://localhost:8000/graphql";
+const client = new ApolloClient({ uri });
 
 function submit(reaction: string, message = "") {
   client
