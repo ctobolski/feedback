@@ -10,7 +10,11 @@ describe("Implementation tests", () => {
     const wrapper = shallow(<App client={mockClient} />);
     const happyButton = wrapper.find("span").at(0);
     happyButton.simulate("click");
-    //@ts-ignore
-    expect(wrapper.instance().state.reaction).toEqual("happy");
+    expect(
+      wrapper
+        .find("span")
+        .at(0)
+        .hasClass("selected")
+    ).toBeTruthy();
   });
 });
