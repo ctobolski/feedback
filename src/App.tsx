@@ -6,12 +6,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMeh, faGrin } from "@fortawesome/free-solid-svg-icons";
 library.add(faMeh, faGrin);
 
-interface State {}
-
-class App extends Component<FeedbackProps, State> {
-  render() {
-    return <div>Hello World</div>;
-  }
+function App() {
+  return <div>Hello World</div>;
 }
 
 export default App;
