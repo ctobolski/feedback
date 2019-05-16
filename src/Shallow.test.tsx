@@ -6,6 +6,6 @@ describe("Implementation tests", () => {
   it("should render a happy button or icon", () => {
     const wrapper = shallow(<App />);
     const happyButton = wrapper.find("span").at(0);
-    expect(happyButton.exists).toBeTruthy();
+    expect(happyButton.exists()).toBeTruthy();
   });
 });
