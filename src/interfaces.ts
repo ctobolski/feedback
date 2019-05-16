@@ -8,7 +8,6 @@ export interface FeedbackProps {
 
 export interface FeedbackButtonProps {
   setReaction: () => void;
-  getClassName: () => string;
   testId: string;
   iconName: IconProp;
 }

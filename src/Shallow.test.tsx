@@ -3,18 +3,9 @@ import App from "./App";
 import { shallow } from "enzyme";
 
 describe("Implementation tests", () => {
-  it("should update state to happy when clicking the happy button", () => {
-    const mockClient = {
-      submit: jest.fn(() => Promise.resolve())
-    };
-    const wrapper = shallow(<App client={mockClient} />);
+  it("should render a happy button or icon", () => {
+    const wrapper = shallow(<App />);
     const happyButton = wrapper.find("span").at(0);
-    happyButton.simulate("click");
-    expect(
-      wrapper
-        .find("span")
-        .at(0)
-        .hasClass("selected")
-    ).toBeTruthy();
+    expect(happyButton.exists).toBeTruthy();
   });
 });
