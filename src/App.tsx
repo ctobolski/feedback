@@ -6,7 +6,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faMeh, faGrin } from "@fortawesome/free-solid-svg-icons";
 library.add(faMeh, faGrin);
 
-function App() {
+function App(props: FeedbackProps) {
   return <div>Hello World</div>;
 }
 
